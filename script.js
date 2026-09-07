@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
       message
     )}`;
 
-    window.open(url, "_blank", "noopener,noreferrer");
+    const opened = window.open(url, "_blank", "noopener,noreferrer");
+    if (!opened) window.location.href = url;
   }
 
   /* ---------------------------------------------------------
@@ -80,12 +81,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const propertyData = {
     Buy: {
-      title: "Looking to buy in Gurgaon?",
+      title: "Looking to buy in Gurugram?",
       copy:
         "Tell us your preferred sector, property type and budget. We'll use your enquiry to start the conversation on WhatsApp.",
       type: "Purchase",
       message:
-        "I want to purchase a property in Gurgaon. Please share suitable options."
+        "I want to purchase a property in Gurugram. Please share suitable options."
     },
 
     Sell: {
@@ -94,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Share the location, property type and your preferred selling timeline. We'll start with your requirement.",
       type: "Sale",
       message:
-        "I want to sell my property in Gurgaon. Please contact me for further discussion."
+        "I want to sell my property in Gurugram. Please contact me for further discussion."
     },
 
     Rent: {
@@ -103,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Tell us whether you need residential or commercial space, preferred location, budget and move-in timing.",
       type: "Rent",
       message:
-        "I am looking to rent/lease a property in Gurgaon. Please share suitable options."
+        "I am looking to rent/lease a property in Gurugram. Please share suitable options."
     }
   };
 
